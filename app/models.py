@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
 class Employee(BaseModel):
-    id: int
+    id: str
     name: str
     mail: str
