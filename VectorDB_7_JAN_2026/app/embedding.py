@@ -1,11 +1,20 @@
 import requests
-from app.config import OLLAMA_URL
+import ollama
+from app.config import OLLAMA_MODEL
+from app.chroma import collection
 
-MODEL = "nomic-embed-text"
+def get_embedding(text: str):
+    response = ollama.embeddings(
+        model=OLLAMA_MODEL,
+        prompt=text
+    )
 
-def get_embedding(text: str) -> list[float]:
-    response = requests.post(
-        f"{OLLAMA_URL}/v1/models/{MODEL}/embed",
-        json={"model": MODEL, "prompt": text})
-    response.raise_for_status()
-    embedding = response.json().get("embedding")
+    embedding = response["embedding"]
+
+    collection.add(
+        documents=[text],
+        embeddings=[embedding],
+        ids=[str(hash(text))]
+    )
+
+    return embedding

@@ -1,1 +1,45 @@
-.env
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.pyi
+*.env
+*.env.*  # ignore all env files except example
+*.sqlite3
+*.db
+*.log
+
+# Virtual environment
+venv/
+ENV/
+env/
+.env/
+
+# ChromaDB persistence
+chroma_db/
+
+# Pytest
+.pytest_cache/
+.cache/
+
+# VSCode / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.bak
+*.swp
+*.tmp
+*.orig
+
+# Ignore run outputs
+run.sh
+*.exe
