@@ -7,3 +7,6 @@ class TextItem(BaseModel):
 class Query(BaseModel):
     query: str
     top_k: int = 5
+
+class embed(BaseModel):
+    text:str
