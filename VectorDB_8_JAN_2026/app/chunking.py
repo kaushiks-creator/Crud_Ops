@@ -1,4 +1,4 @@
-def chunk_text(text: str, chunk_size: int = 1000, overlap: int = 50):
+def chunk_text(text: str, chunk_size: int = 200, overlap: int = 50):
     chunks = []
     start = 0
 

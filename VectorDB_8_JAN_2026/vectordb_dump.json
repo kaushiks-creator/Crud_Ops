@@ -1,1 +1,81 @@
-[]
+{
+  "count": 18,
+  "ids": [
+    "6140531916160876182",
+    "5437693569078572545",
+    "-1294948599298571622",
+    "-3876074922697191345",
+    "7124180258781374774",
+    "-6432752060234554820",
+    "5668277946482102471",
+    "6374381054516063525",
+    "6898006799082440626",
+    "63041ec6-9557-4667-8d34-2c2555dcef7d",
+    "eb3cbb5c-8bd7-41f6-bd99-c94fb621cc9d",
+    "bf8f76c9-66c6-45de-a264-0174a10f6cef",
+    "25701465-0421-4ae0-a166-4801b909cb1c",
+    "a5ea50de-d45e-4fa3-974e-dcf3f3ea978d",
+    "d045f2da-7084-494c-a7a9-0f405c8b229a",
+    "8bbe1fe0-8fb0-4e80-ae2f-ed5f1d844867",
+    "61964413-8cbc-42f2-84d9-9bcae8231a7d",
+    "a5157b9e-e68b-4e3f-867e-ee700ad226b2"
+  ],
+  "documents": [
+    "Electronic Health Records (EHRs) represent a significant change in modern healthcare systems.  \nThey provide a digital repository of patient histories, clinical observations, diagnoses, medications, \n",
+    ", clinical observations, diagnoses, medications, \nand treatment outcomes.  \nThe widespread use of EHRs has created new opportunities for medical research and clinical \ndecision-making. \nBy allowing th",
+    "rch and clinical \ndecision-making. \nBy allowing the integration of patient data from hospitals, laboratories, and care facilities, EHRs form \nan essential foundation for developing systems that can pr",
+    "tial foundation for developing systems that can predict disease risks, identify comorbidities, \nand improve personalized treatments.  \nHowever, the increasing availability of EHRs also raises importan",
+    "creasing availability of EHRs also raises important challenges related to privacy, data \nsecurity, and ethical governance. \nAmong the various methods for discovering knowledge in healthcare data, Asso",
+    "for discovering knowledge in healthcare data, Association Rule Mining \n(ARM) has become one of the most effective and understandable tools for finding meaningful \ncorrelations among clinical attribute",
+    " meaningful \ncorrelations among clinical attributes, diagnoses, medications, and outcomes.  \nUnlike complex predictive models, ARM generates human-readable patterns in the form of \nassociation rules, ",
+    "dable patterns in the form of \nassociation rules, usually presented as “if–then” statements (e.g., if diabetes and obesity, then risk of \nhypertension). \n ",
+    "). \n ",
+    "Electronic Health Records (EHRs) represent a significant change in modern healthcare systems.  \nThey provide a digital repository of patient histories, clinical observations, diagnoses, medications, \n",
+    ", clinical observations, diagnoses, medications, \nand treatment outcomes.  \nThe widespread use of EHRs has created new opportunities for medical research and clinical \ndecision-making. \nBy allowing th",
+    "rch and clinical \ndecision-making. \nBy allowing the integration of patient data from hospitals, laboratories, and care facilities, EHRs form \nan essential foundation for developing systems that can pr",
+    "tial foundation for developing systems that can predict disease risks, identify comorbidities, \nand improve personalized treatments.  \nHowever, the increasing availability of EHRs also raises importan",
+    "creasing availability of EHRs also raises important challenges related to privacy, data \nsecurity, and ethical governance. \nAmong the various methods for discovering knowledge in healthcare data, Asso",
+    "for discovering knowledge in healthcare data, Association Rule Mining \n(ARM) has become one of the most effective and understandable tools for finding meaningful \ncorrelations among clinical attribute",
+    " meaningful \ncorrelations among clinical attributes, diagnoses, medications, and outcomes.  \nUnlike complex predictive models, ARM generates human-readable patterns in the form of \nassociation rules, ",
+    "dable patterns in the form of \nassociation rules, usually presented as “if–then” statements (e.g., if diabetes and obesity, then risk of \nhypertension). \n ",
+    "). \n "
+  ],
+  "metadata": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+      "source": "test.pdf"
+    },
+    {
+      "source": "test.pdf"
+    },
+    {
+      "source": "test.pdf"
+    },
+    {
+      "source": "test.pdf"
+    },
+    {
+      "source": "test.pdf"
+    },
+    {
+      "source": "test.pdf"
+    },
+    {
+      "source": "test.pdf"
+    },
+    {
+      "source": "test.pdf"
+    },
+    {
+      "source": "test.pdf"
+    }
+  ]
+}

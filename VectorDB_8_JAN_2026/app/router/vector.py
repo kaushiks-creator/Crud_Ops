@@ -56,14 +56,29 @@ async def ingest_document(file: UploadFile = File(...)):
         "chunks_stored": len(chunks)
     }
 
-@router.post("/ask")
-def ask_question(payload: Query):
-    results = vector_search(
-        query=payload.query,
-        top_k=payload.top_k
+@router.get("/dump")
+def dump_collection(limit: int = 100):
+    """
+    Development-only endpoint to inspect Chroma contents
+    """
+    count = collection.count()
+
+    if count == 0:
+        return {
+            "count": 0,
+            "documents": [],
+            "ids": [],
+            "metadata": [],
+        }
+
+    data = collection.get(
+        limit=min(limit, count),
+        include=["documents", "metadatas"]
     )
 
     return {
-        "question": payload.query,
-        "answers": results
+        "count": count,
+        "ids": data["ids"],
+        "documents": data["documents"],
+        "metadata": data.get("metadatas"),
     }
