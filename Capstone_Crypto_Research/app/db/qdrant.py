@@ -38,8 +38,9 @@ def upsert_articles(articles: list[dict]) -> None:
     for article in articles:
         points.append(PointStruct(
             id=article["id"],
-            vector=[0.0] * VECTOR_SIZE,
-            payload=article))
+            vector=article["vector"],
+            payload={k: v for k, v in article.items()
+                    if k not in {"id", "vector"}}))
     
     client.upsert(
         collection_name=COLLECTION_NAME,
