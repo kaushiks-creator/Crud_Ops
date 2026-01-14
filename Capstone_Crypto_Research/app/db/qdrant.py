@@ -1,5 +1,7 @@
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams
+from qdrant_client.models import PointStruct
+import uuid
 
 COLLECTION_NAME = "crypto_news"
 VECTOR_SIZE = 768 
@@ -28,3 +30,18 @@ def init_collection() -> None:
             distance=Distance.COSINE
         )
     )
+
+def upsert_articles(articles: list[dict]) -> None:
+    client = get_qdrant_client()
+
+    points = []
+    for article in articles:
+        points.append(PointStruct(
+            id=article["id"],
+            vector=[0.0] * VECTOR_SIZE,
+            payload=article))
+    
+    client.upsert(
+        collection_name=COLLECTION_NAME,
+        points=points)
+    return len(points)
