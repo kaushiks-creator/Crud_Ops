@@ -1,5 +1,29 @@
 import streamlit as st
 import requests
+st.markdown("""
+<style>
+body {
+    background-color: #0a0f1c;
+    color: #e0e0e0;
+}
+h1, h2, h3 {
+    color: #00f6ff;
+}
+div.stButton > button {
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    color: white;
+    border-radius: 8px;
+}
+.summary-box {
+    background: #11162a;
+    border-left: 4px solid #00f6ff;
+    padding: 16px;
+    border-radius: 8px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
 
 API_BASE = "http://localhost:8000"
 
@@ -47,21 +71,22 @@ if st.button("Search") and query:
         st.subheader("🧠 AI Summary")
         clean_summary = data["summary"].replace("\n", "<br>")
         st.markdown(
-    f"""
-    <div style="
-        background-color:#f6f7f9;
-        padding:16px;
-        border-radius:8px;
-        font-size:16px;
-        line-height:1.5;
-        max-height:260px;
-        overflow:hidden;
-    ">
-    {clean_summary}
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+                f"""
+                <div style="
+                    background:#0b1020;
+                    border-left:4px solid #00f6ff;
+                    padding:16px;
+                    border-radius:10px;
+                    font-size:15px;
+                    line-height:1.6;
+                    color:#e6e6e6;
+                ">
+                {clean_summary}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
+
 
         results = data["sources"]
     else:
@@ -71,8 +96,15 @@ if st.button("Search") and query:
         st.warning("No results found.")
     else:
         for r in results:
+            color = {
+                "bullish": "#00ff9c",
+                "bearish": "#ff4d4d",
+                "neutral": "#ffaa00"
+            }.get(r["sentiment"], "#888")
             st.markdown("### " + r.get("title", "No title"))
             st.write(r.get("content", "")[:500] + "...")
             st.write(f"**Source:** {r.get('source')}")
             st.write(f"**Score:** {round(r.get('score', 0), 4)}")
             st.markdown("---")
+
+
